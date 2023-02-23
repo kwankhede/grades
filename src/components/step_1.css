@@ -1,0 +1,69 @@
+table {
+    width: 70%;
+    border-collapse: collapse;
+    overflow: hidden;
+    margin: 0 auto;
+}
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tbody {
+    height: 300px;
+    overflow-y: scroll;
+    display: block;
+}
+
+input[type="file"] {
+    padding: 18px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead tr:first-child th {
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    tbody {
+        display: block;
+        height: auto;
+        overflow: auto;
+    }
+
+    td:before {
+        content: attr(data-label);
+        float: center;
+        font-weight: bold;
+    }
+}
